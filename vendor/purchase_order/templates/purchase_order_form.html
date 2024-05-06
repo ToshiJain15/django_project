@@ -1,0 +1,17 @@
+<!-- purchase_order/templates/purchase_order_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Purchase Order</title>
+</head>
+<body>
+    <h1>Create Purchase Order</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
