@@ -1,5 +1,5 @@
 from django.db import models
-
+from vendor_profile.models import Vendor
 # Create your models here.
 class PurchaseOrder(models.Model):
     po_number = models.CharField(max_length=100, unique=True)

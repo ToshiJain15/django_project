@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import VendorPerformanceAPIView
+from .views import VendorListCreateAPIView, VendorRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
-    path('api/vendors/<int:vendor_id>/performance', VendorPerformanceAPIView.as_view(), name='vendor-performance'),
-]
+    path('vendors/', VendorListCreateAPIView.as_view(), name='vendor-list-create'),
+    path('vendors/<int:pk>/', VendorRetrieveUpdateDestroyAPIView.as_view(), name='vendor-retrieve-update-destroy'),
+    ]

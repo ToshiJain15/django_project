@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import VendorPerformanceAPIView
+from .views import PurchaseOrderListCreateAPIView,PurchaseOrderRetrieveUpdateDestroyAPIView
 
 urlpatterns = [
     path('api/purchase_orders/', PurchaseOrderListCreateAPIView.as_view(), name='purchase-order-list-create'),

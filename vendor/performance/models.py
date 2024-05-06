@@ -1,5 +1,5 @@
 from django.db import models
-
+from vendor_profile.models import Vendor
 # Create your models here.
 class HistoricalPerformance(models.Model):
     vendor = models.ForeignKey(Vendor, on_delete=models.CASCADE)
