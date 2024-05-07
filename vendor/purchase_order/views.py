@@ -19,7 +19,7 @@ def purchase_order_create(request):
         form = PurchaseOrderForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('purchase-order-list')  # Redirect to the purchase order list page
+            return redirect('purchase-order-list-create')  # Redirect to the purchase order list page
     else:
         form = PurchaseOrderForm()
     return render(request, 'purchase_order_form.html', {'form': form})
