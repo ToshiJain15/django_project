@@ -7,6 +7,10 @@ from rest_framework import generics
 from django.shortcuts import render, redirect
 from .forms import PerformanceForm
 # Create your views here.
+class HistoricalPerformanceListCreateAPIView(generics.ListCreateAPIView):
+    queryset = HistoricalPerformance.objects.all()
+    serializer_class = HistoricalPerformanceSerializer
+
 class VendorPerformanceAPIView(generics.RetrieveAPIView):
     queryset = HistoricalPerformance.objects.all()
     serializer_class = HistoricalPerformanceSerializer
@@ -16,7 +20,7 @@ def performance_form(request):
         form = PerformanceForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('performance_form.html')  # Redirect to a success page
+            return redirect('')  # Redirect to a success page
     else:
         form = PerformanceForm()
     return render(request, 'performance_form.html', {'form': form})
