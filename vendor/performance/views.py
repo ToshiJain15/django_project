@@ -16,7 +16,7 @@ def performance_form(request):
         form = PerformanceForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success_page')  # Redirect to a success page
+            return redirect('performance_form.html')  # Redirect to a success page
     else:
         form = PerformanceForm()
     return render(request, 'performance_form.html', {'form': form})
