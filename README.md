@@ -16,7 +16,7 @@ cd vendor
 pip install -r requirements.txt
 4.Configure the database settings:
 
-Open vendor_management/settings.py.
+Open vendor/settings.py.
 Update the database settings according to your environment.
 py manage.py migrate
 
